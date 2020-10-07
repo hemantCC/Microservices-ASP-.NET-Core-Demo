@@ -1,0 +1,60 @@
+{
+    "Routes": [
+        //List Cars
+        {
+            "DownstreamPathTemplate": "/api/cars",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "11897"
+                }
+            ],
+            "UpstreamPathTemplate": "/cars",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+
+        //Add Car
+        {
+            "DownstreamPathTemplate": "/api/Add/AddCar/",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "14898"
+                }
+            ],
+            "UpstreamPathTemplate": "/AddCar",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+
+        //Update Car
+        {
+            "DownstreamPathTemplate": "/api/Update/UpdateCar/",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "14900"
+                }
+            ],
+            "UpstreamPathTemplate": "/UpdateCar",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+
+        //Delete Car
+        {
+            "DownstreamPathTemplate": "/api/Delete/DeleteCar/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "14905"
+                }
+            ],
+            "UpstreamPathTemplate": "/DeleteCar/{id}",
+            "UpstreamHttpMethod": [ "DELETE" ]
+        }
+    ]
+
+}
